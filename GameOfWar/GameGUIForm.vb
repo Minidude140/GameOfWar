@@ -26,6 +26,9 @@
 
 Public Class GameGUIForm
     Private Sub GameGUIForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        DrawCard()
+        GivePlayerCard(1, DrawCard())
+        GivePlayerCard(2, DrawCard())
+        Console.WriteLine($"{playerHands(0, 0)} , {playerHands(0, 1)}")
+        Console.WriteLine($"{playerHands(1, 0)} , {playerHands(1, 1)}")
     End Sub
 End Class

@@ -8,7 +8,7 @@
 'TODO
 '[*]Keep Track of Card Value and Drawn Status (Array Location Tells Value)
 '[*]Create Draw Card Function (Returns Card Drawn Array Location)
-'[]Give Drawn Card to Chosen Player
+'[*]Give Drawn Card to Chosen Player
 '[]Compare Cards
 '[]Game Reset
 '[]Game End
@@ -30,6 +30,10 @@ Module GameMechanicsModule
     'J      10,0
     'Q      11,0
     'K      12,0
+    Public playerHands(1, 1) As Integer
+    '          1stCardValue     1stCardSuit
+    'Player 1       0,0             0,1
+    'Player 2       1,0             1,1
 
     ''' <summary>
     ''' Draws Random Card Returns Card array Coordinates.  Tests if card is already drawn.  Tests if Deck is Empty
@@ -56,7 +60,6 @@ Module GameMechanicsModule
             End If
             Return cardDrawn
     End Function
-
 
     ''' <summary>
     ''' Returns a Random Number from 0 to the given max value
@@ -86,4 +89,24 @@ Module GameMechanicsModule
         End If
         Return count
     End Function
+
+    ''' <summary>
+    ''' Populates PlayerHands Array to Given Player and Card
+    ''' </summary>
+    ''' <param name="player"></param>
+    ''' <param name="playerCard"></param>
+    Sub GivePlayerCard(player As Integer, playerCard() As Integer)
+        Select Case player
+            Case = 1
+                'Give card to player 1 value then suit
+                playerHands(0, 0) = playerCard(0)
+                playerHands(0, 1) = playerCard(1)
+            Case = 2
+                'Give card to player 2 value then suit
+                playerHands(1, 0) = playerCard(0)
+                playerHands(1, 1) = playerCard(1)
+            Case Else
+                'Not enough players, Do nothing (need to expand playerHandsArray and this Case Statement for more players)
+        End Select
+    End Sub
 End Module
