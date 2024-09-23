@@ -5,6 +5,24 @@
 
 'This Form Handles the GUI Input and Output to and from the User
 
+'TODO
+'[]Graphics for Deck
+'**[]Display Deck Full
+'**[]Display Deck Empty
+'[]Graphics for Player Cards
+'**[]Display Back of Cards When Drawn
+'**[]Display Cards Shown
+'**[]Display Cards Won (Stack)
+'[]User input
+'**[]Player 1 Draw Card Button
+'**[]Player 2 Draw Card Button
+'**[]SHow Hands Button
+'**[]Reset Game Button
+'[]Game End Screen
+'[]About Form
+'[]Menu Strips
+'[]Tool Tips
+'[]Tab Stops
 
 Public Class GameGUIForm
 
