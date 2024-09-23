@@ -79,14 +79,18 @@ Module GameMechanicsModule
     ''' <returns></returns>
     Function CardCount(Optional reset As Boolean = False, Optional drawCard As Boolean = False) As Integer
         Static count As Integer
-
+        'Check if the Game Count Should Be Reset
         If reset = True Then
+            'Reset the Count
             count = 0
         Else
+            'Check if a Card is Drawn
             If drawCard Then
+                'Increment Count
                 count += 1
             End If
         End If
+        'Return Number of Cards Drawn
         Return count
     End Function
 
@@ -107,6 +111,19 @@ Module GameMechanicsModule
                 playerHands(1, 1) = playerCard(1)
             Case Else
                 'Not enough players, Do nothing (need to expand playerHandsArray and this Case Statement for more players)
+        End Select
+    End Sub
+
+    '*************Not Complete***************
+    Sub CompareCardValues()
+        'Examine Player 1's First Card's Value
+        Select Case playerHands(0, 0)
+            Case > playerHands(1, 0)
+                'Player 1 Has a Higher Value Card
+            Case = playerHands(1, 0)
+                'Players Have Equal Cards
+            Case < playerHands(1, 0)
+                'Player 2 Has a Higher Value Card
         End Select
     End Sub
 End Module
