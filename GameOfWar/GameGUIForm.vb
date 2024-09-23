@@ -25,5 +25,7 @@
 '[]Tab Stops
 
 Public Class GameGUIForm
-
+    Private Sub GameGUIForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DrawCard()
+    End Sub
 End Class
