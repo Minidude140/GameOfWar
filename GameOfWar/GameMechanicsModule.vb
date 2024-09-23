@@ -31,12 +31,15 @@ Module GameMechanicsModule
     'Q      11,0
     'K      12,0
 
+    ''' <summary>
+    ''' Draws Random Card Returns Card array Coordinates.  Tests if card is already drawn.  Tests if Deck is Empty
+    ''' </summary>
+    ''' <returns></returns>
     Function DrawCard() As Integer()
         Dim cardDrawn(1) As Integer
         'Checks if all Cards are Drawn
         Dim i As Integer = 0
-        Do Until i = 60
-            If CardCount() < 52 Then
+        If CardCount() < 52 Then
                 'Draw Random Card Until One that has not already been drawn is found
                 Do
                     'Draw a Random Value Card
@@ -48,15 +51,10 @@ Module GameMechanicsModule
                 cardDeck(cardDrawn(0), cardDrawn(1)) = True
                 'increment cards drawn count
                 CardCount(False, True)
-                Console.WriteLine($"{cardDrawn(0)}, {cardDrawn(1)}")
             Else
                 'All Cards Drawn Initiate Game End
-                Console.WriteLine("All Cards Drawn")
             End If
-            i += 1
-        Loop
-
-        Return cardDrawn
+            Return cardDrawn
     End Function
 
 
