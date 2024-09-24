@@ -9,7 +9,7 @@
 '[*]Keep Track of Card Value and Drawn Status (Array Location Tells Value)
 '[*]Create Draw Card Function (Returns Card Drawn Array Location)
 '[*]Give Drawn Card to Chosen Player
-'[]Compare Cards
+'[*]Compare Cards
 '[]Game Reset
 '[]Game End
 
@@ -34,6 +34,8 @@ Module GameMechanicsModule
     '          1stCardValue     1stCardSuit
     'Player 1       0,0             0,1
     'Player 2       1,0             1,1
+    Dim player1Score As Integer = 0
+    Dim player2Score As Integer = 0
 
     ''' <summary>
     ''' Draws Random Card Returns Card array Coordinates.  Tests if card is already drawn.  Tests if Deck is Empty
@@ -114,16 +116,26 @@ Module GameMechanicsModule
         End Select
     End Sub
 
-    '*************Not Complete***************
-    Sub CompareCardValues()
+    ''' <summary>
+    ''' Compares Player Hand Card Values and Increments Score.  Returns 1 for Player 1 Won, 2 for Player 2 Won, and 0 for Tie
+    ''' </summary>
+    ''' <returns></returns>
+    Function CompareCardValues() As Integer
+        Dim whoWon As Integer
         'Examine Player 1's First Card's Value
         Select Case playerHands(0, 0)
             Case > playerHands(1, 0)
                 'Player 1 Has a Higher Value Card
+                player1Score += 1
+                whoWon = 1
             Case = playerHands(1, 0)
                 'Players Have Equal Cards
+                whoWon = 0
             Case < playerHands(1, 0)
                 'Player 2 Has a Higher Value Card
+                player2Score += 1
+                whoWon = 2
         End Select
-    End Sub
+        Return whoWon
+    End Function
 End Module
