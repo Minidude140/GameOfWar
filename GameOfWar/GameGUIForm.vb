@@ -25,8 +25,6 @@
 '[]Tab Stops
 
 Public Class GameGUIForm
-    Dim cardsLeft As Integer = 52
-
     Sub ResetGUI()
         'Allow player 1 to draw a card
         Player1Button.Enabled = True
@@ -37,8 +35,7 @@ Public Class GameGUIForm
         Player1ScoreLabel.Text = "0"
         Player2ScoreLabel.Text = "0"
         'Reset Remaining number of cards
-        cardsLeft = 52
-        CardsLeftLabel.Text = $"{cardsLeft}"
+        CardsLeftLabel.Text = $"{52 - CardCount()}"
     End Sub
     Private Sub GameGUIForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Reset Game Mechanics (card deck and scores)
@@ -62,8 +59,7 @@ Public Class GameGUIForm
         'Draw a card and give to player 1
         GivePlayerCard(1, DrawCard())
         'Decrement the number of cards remaining and update label
-        cardsLeft -= 1
-        CardsLeftLabel.Text = $"{cardsLeft}"
+        CardsLeftLabel.Text = $"{52 - CardCount()}"
         'Display Player 1's card
         Player1CardLabel.Text = $"{playerHands(0, 0)}  {playerHands(0, 1)}"
         'Allow player 2 to draw a card
@@ -75,8 +71,7 @@ Public Class GameGUIForm
         'Draw a card and give it to player 2
         GivePlayerCard(2, DrawCard())
         'Decrement the number of cards remaining and update label
-        cardsLeft -= 1
-        CardsLeftLabel.Text = $"{cardsLeft}"
+        CardsLeftLabel.Text = $"{52 - CardCount()}"
         'Display Player 2's card
         Player2CardLabel.Text = $"{playerHands(1, 0)}  {playerHands(1, 1)}"
         'Allow user to Reveal cards
@@ -98,7 +93,7 @@ Public Class GameGUIForm
             MsgBox("This round is a tie!")
         End If
         'If there are no more cards initiate Game End
-        If cardsLeft = 0 Then
+        If CardCount() = 52 Then
             If GameEnd() = 1 Then
                 'player 1 won
                 MsgBox("Player 1 has won the game")

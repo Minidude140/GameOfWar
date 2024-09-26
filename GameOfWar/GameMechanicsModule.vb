@@ -151,6 +151,8 @@ Module GameMechanicsModule
     Sub ResestGame()
         'Reshuffle the Deck
         ReDim cardDeck(12, 3)
+        'Reset Card Count
+        CardCount(True, False)
         'Reset Player Hands
         ReDim playerHands(1, 1)
         'Reset Player Scores
