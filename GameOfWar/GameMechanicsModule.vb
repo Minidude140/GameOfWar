@@ -44,7 +44,6 @@ Module GameMechanicsModule
     Function DrawCard() As Integer()
         Dim cardDrawn(1) As Integer
         'Checks if all Cards are Drawn
-        Dim i As Integer = 0
         If CardCount() < 52 Then
                 'Draw Random Card Until One that has not already been drawn is found
                 Do
@@ -117,26 +116,33 @@ Module GameMechanicsModule
     End Sub
 
     ''' <summary>
-    ''' Compares Player Hand Card Values and Increments Score.  Returns 1 for Player 1 Won, 2 for Player 2 Won, and 0 for Tie
+    ''' Compares Player Hand Card Values and optionally Increments Score.  Returns 1 for Player 1 Won, 2 for Player 2 Won, and 0 for Tie
     ''' </summary>
     ''' <returns></returns>
-    Function CompareCardValues() As Integer
+    Function CompareCardValues(Optional increaseScore As Boolean = False) As Integer()
         Dim whoWon As Integer
+        Dim currentScore As Integer
         'Examine Player 1's First Card's Value
         Select Case playerHands(0, 0)
             Case > playerHands(1, 0)
                 'Player 1 Has a Higher Value Card
-                player1Score += 1
+                If increaseScore = True Then
+                    player1Score += 1
+                End If
                 whoWon = 1
+                currentScore = player1Score
             Case = playerHands(1, 0)
                 'Players Have Equal Cards
                 whoWon = 0
             Case < playerHands(1, 0)
                 'Player 2 Has a Higher Value Card
-                player2Score += 1
+                If increaseScore = True Then
+                    player2Score += 1
+                End If
                 whoWon = 2
+                currentScore = player2Score
         End Select
-        Return whoWon
+        Return {whoWon, currentScore}
     End Function
 
     ''' <summary>
