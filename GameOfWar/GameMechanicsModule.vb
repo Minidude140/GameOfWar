@@ -151,4 +151,23 @@ Module GameMechanicsModule
         player1Score = 0
         player2Score = 0
     End Sub
+
+    ''' <summary>
+    ''' Checks player score and returns the winner.  1 = player 1 wins, 2 = player 2 wins, 0 = Tie Game
+    ''' </summary>
+    ''' <returns></returns>
+    Function GameEnd() As Integer
+        Dim whowins As Integer
+        If player1Score > player2Score Then
+            'Player 1 wins
+            whowins = 1
+        ElseIf player1Score = player2Score Then
+            'Tie Game
+            whowins = 0
+        Else
+            'Player 2 wins
+            whowins = 2
+        End If
+        Return whowins
+    End Function
 End Module
