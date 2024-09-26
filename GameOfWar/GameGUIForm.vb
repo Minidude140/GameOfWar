@@ -17,7 +17,7 @@
 '**[]Player 1 Draw Card Button
 '**[]Player 2 Draw Card Button
 '**[]SHow Hands Button
-'**[]Reset Game Button
+'**[*]Reset Game Button
 '[]Game End Screen
 '[]About Form
 '[]Menu Strips
@@ -26,9 +26,23 @@
 
 Public Class GameGUIForm
     Private Sub GameGUIForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        GivePlayerCard(1, DrawCard())
-        GivePlayerCard(2, DrawCard())
-        Console.WriteLine($"{playerHands(0, 0)} , {playerHands(0, 1)}")
-        Console.WriteLine($"{playerHands(1, 0)} , {playerHands(1, 1)}")
+        Player1Button.Enabled = False
+        Player2Button.Enabled = False
+        ShowCardsButton.Enabled = False
+        'GivePlayerCard(1, DrawCard())
+        'GivePlayerCard(2, DrawCard())
+        'Console.WriteLine($"{playerHands(0, 0)} , {playerHands(0, 1)}")
+        'Console.WriteLine($"{playerHands(1, 0)} , {playerHands(1, 1)}")
+    End Sub
+
+    Private Sub QuitButton_Click(sender As Object, e As EventArgs) Handles QuitButton.Click
+        Me.Close()
+    End Sub
+
+    Private Sub ResetGameButton_Click(sender As Object, e As EventArgs) Handles ResetGameButton.Click
+        ResestGame()
+        Player1Button.Enabled = False
+        Player2Button.Enabled = False
+        ShowCardsButton.Enabled = False
     End Sub
 End Class
