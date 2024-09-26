@@ -82,7 +82,7 @@ Partial Class GameGUIForm
         'Player1CardLabel
         '
         Me.Player1CardLabel.AutoSize = True
-        Me.Player1CardLabel.Location = New System.Drawing.Point(197, 189)
+        Me.Player1CardLabel.Location = New System.Drawing.Point(227, 189)
         Me.Player1CardLabel.Name = "Player1CardLabel"
         Me.Player1CardLabel.Size = New System.Drawing.Size(51, 17)
         Me.Player1CardLabel.TabIndex = 5
@@ -91,7 +91,7 @@ Partial Class GameGUIForm
         'Player2CardLabel
         '
         Me.Player2CardLabel.AutoSize = True
-        Me.Player2CardLabel.Location = New System.Drawing.Point(699, 189)
+        Me.Player2CardLabel.Location = New System.Drawing.Point(644, 189)
         Me.Player2CardLabel.Name = "Player2CardLabel"
         Me.Player2CardLabel.Size = New System.Drawing.Size(51, 17)
         Me.Player2CardLabel.TabIndex = 6
