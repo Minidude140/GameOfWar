@@ -10,7 +10,7 @@
 '[*]Create Draw Card Function (Returns Card Drawn Array Location)
 '[*]Give Drawn Card to Chosen Player
 '[*]Compare Cards
-'[]Game Reset
+'[*]Game Reset
 '[]Game End
 
 
@@ -138,4 +138,17 @@ Module GameMechanicsModule
         End Select
         Return whoWon
     End Function
+
+    ''' <summary>
+    ''' Resets the Card Deck, Player Hands, and Player Scores
+    ''' </summary>
+    Sub ResestGame()
+        'Reshuffle the Deck
+        ReDim cardDeck(12, 3)
+        'Reset Player Hands
+        ReDim playerHands(1, 1)
+        'Reset Player Scores
+        player1Score = 0
+        player2Score = 0
+    End Sub
 End Module
