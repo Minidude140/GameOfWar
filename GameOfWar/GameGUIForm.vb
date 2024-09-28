@@ -470,11 +470,15 @@ Public Class GameGUIForm
             Player1ScoreLabel.Text = $"{CompareCardValues()(1)}"
             'display cards won stack
             Player1CardsWonPictureBox.BackgroundImage = GameOfWar.My.Resources.CardBack1
+            'Prompt user of winner
+            MsgBox("Player 1 has won this round.")
         ElseIf CompareCardValues()(0) = 2 Then
             'Player 2 has won display updated score
             Player2ScoreLabel.Text = $"{CompareCardValues()(1)}"
             'display cards won stack
             Player2CardsWonPictureBox.BackgroundImage = GameOfWar.My.Resources.CardBack1
+            'Prompt user of winner
+            MsgBox("Player 2 has won this round.")
         Else
             'Round is a tie.  Report to User
             MsgBox("This round is a tie!")
