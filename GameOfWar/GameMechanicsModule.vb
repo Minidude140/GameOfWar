@@ -11,7 +11,7 @@
 '[*]Give Drawn Card to Chosen Player
 '[*]Compare Cards
 '[*]Game Reset
-'[]Game End
+'[*]Game End
 
 
 Module GameMechanicsModule

@@ -13,15 +13,15 @@
 '**[]Display Back of Cards When Drawn
 '**[]Display Cards Shown
 '**[]Display Cards Won (Stack)
-'[]User input
-'**[]Player 1 Draw Card Button
-'**[]Player 2 Draw Card Button
-'**[]SHow Hands Button
+'[*]User input
+'**[*]Player 1 Draw Card Button
+'**[*]Player 2 Draw Card Button
+'**[*]SHow Hands Button
 '**[*]Reset Game Button
 '[]Game End Screen
 '[]About Form
 '[]Menu Strips
-'[]Tool Tips
+'[*]Tool Tips
 '[]Tab Stops
 
 Public Class GameGUIForm
