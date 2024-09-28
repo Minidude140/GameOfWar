@@ -178,4 +178,25 @@ Module GameMechanicsModule
         End If
         Return whowins
     End Function
+
+    ''' <summary>
+    ''' Returns a players score
+    ''' </summary>
+    ''' <param name="player"></param>
+    ''' <returns></returns>
+    Function CheckPlayerScore(player As Integer) As Integer
+        Dim score As Integer
+        If player = 1 Then
+            'requested player 1 score
+            score = player1Score
+        ElseIf player = 2 Then
+            'requested player 2 score
+            score = player2Score
+        Else
+            'should not be called we do not know whose score
+            score = 0
+        End If
+        'return the score requested for
+        Return score
+    End Function
 End Module

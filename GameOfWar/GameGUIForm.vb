@@ -18,7 +18,7 @@
 '**[*]Player 2 Draw Card Button
 '**[*]SHow Hands Button
 '**[*]Reset Game Button
-'[]Game End Screen
+'[*]Game End Screen
 '[*]About Form
 '[*]Menu Strips
 '[*]Tool Tips
@@ -112,16 +112,7 @@ Public Class GameGUIForm
         End If
         'If there are no more cards initiate Game End
         If CardCount() = 52 Then
-            If GameEnd() = 1 Then
-                'player 1 won
-                MsgBox("Player 1 has won the game")
-            ElseIf GameEnd() = 2 Then
-                'player 2 won
-                MsgBox("Player 2 has won the game")
-            Else
-                'its a tie
-                MsgBox("The game is a tie!")
-            End If
+            GameEndForm.Show()
             'Reset Card Deck, Player hands, and scores
             ResestGame()
             'Enable and Disable Start Game Buttons

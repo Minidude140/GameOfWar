@@ -221,6 +221,7 @@ Partial Class GameGUIForm
         Me.MainMenuStrip = Me.WarMenuStrip
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "GameGUIForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "The Game of War"
         Me.WarMenuStrip.ResumeLayout(False)
         Me.WarMenuStrip.PerformLayout()

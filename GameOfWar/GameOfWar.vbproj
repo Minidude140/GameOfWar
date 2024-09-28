@@ -79,6 +79,12 @@
     <Compile Include="AboutForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GameEndForm.Designer.vb">
+      <DependentUpon>GameEndForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GameEndForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GameGUIForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameEndForm.resx">
+      <DependentUpon>GameEndForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameGUIForm.resx">
       <DependentUpon>GameGUIForm.vb</DependentUpon>
