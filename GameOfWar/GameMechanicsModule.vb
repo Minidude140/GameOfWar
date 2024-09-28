@@ -268,4 +268,16 @@ Module GameMechanicsModule
         'Return value, suit 
         Return {card(0), card(1)}
     End Function
+
+    ''' <summary>
+    ''' Returns player card array location.  (give 1 or 2 for player number)
+    ''' </summary>
+    ''' <param name="player"></param>
+    ''' <returns></returns>
+    Function CheckPlayerCard(player As Integer) As Integer()
+        Dim card(1) As Integer
+        card(0) = playerHands((player - 1), 0)
+        card(1) = playerHands((player - 1), 1)
+        Return {card(0), card(1)}
+    End Function
 End Module
