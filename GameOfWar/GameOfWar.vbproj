@@ -142,9 +142,6 @@
     <None Include="Resources\CardBack1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CardDeckEmpty.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Clubs 1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -338,6 +335,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Spades 13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\CardDeckEmpty.png" />
+    <Content Include="Resources\Image1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

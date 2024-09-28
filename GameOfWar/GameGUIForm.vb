@@ -26,6 +26,7 @@
 
 Imports System.Threading
 Public Class GameGUIForm
+
     Sub ResetGUI()
         'Allow player 1 to draw a card
         Player1Button.Enabled = True
@@ -39,8 +40,8 @@ Public Class GameGUIForm
         Player1ScoreLabel.Text = "0"
         Player2ScoreLabel.Text = "0"
         'Reset Players Hands Label
-        Player1CardLabel.Text = ""
-        Player2CardLabel.Text = ""
+        Player1CardPictureBox.BackgroundImage = GameOfWar.My.Resources.CardDeckEmpty
+        Player2CardPictureBox.BackgroundImage = GameOfWar.My.Resources.CardDeckEmpty
         'Reset Remaining number of cards
         CardsLeftLabel.Text = $"{52 - CardCount()}"
         DeckOfCardsPictureBox.BackgroundImage = GameOfWar.My.Resources.Resources.CardBack1
@@ -73,7 +74,7 @@ Public Class GameGUIForm
         'Decrement the number of cards remaining and update label
         CardsLeftLabel.Text = $"{52 - CardCount()}"
         'Display Player 1's card
-        Player1CardLabel.Text = "Player 1 Has a Card"
+        ' Player1CardLabel.Text = "Player 1 Has a Card"
         'Allow player 2 to draw a card
         Player1Button.Enabled = False
         Player1DrawCardMenuItem.Enabled = False
@@ -88,7 +89,7 @@ Public Class GameGUIForm
         'Decrement the number of cards remaining and update label
         CardsLeftLabel.Text = $"{52 - CardCount()}"
         'Display Player 2's card
-        Player2CardLabel.Text = "Player 2 Has a Card"
+        'Player2CardLabel.Text = "Player 2 Has a Card"
         'Allow user to Reveal cards
         Player2Button.Enabled = False
         Player2DrawCardMenuItem.Enabled = False
@@ -99,8 +100,8 @@ Public Class GameGUIForm
     Private Sub ShowCardsButton_Click(sender As Object, e As EventArgs) Handles ShowCardsButton.Click,
                                                                                 RevealCardsMenuItem.Click
         'Show Player Cards
-        Player1CardLabel.Text = $"{playerHands(0, 0)}  {playerHands(0, 1)}"
-        Player2CardLabel.Text = $"{playerHands(1, 0)}  {playerHands(1, 1)}"
+        'Player1CardLabel.Text = $"{playerHands(0, 0)}  {playerHands(0, 1)}"
+        'Player2CardLabel.Text = $"{playerHands(1, 0)}  {playerHands(1, 1)}"
         'Compare Card Values and increment score the first time it is called
         If CompareCardValues(True)(0) = 1 Then
             'Player 1 has won display updated score

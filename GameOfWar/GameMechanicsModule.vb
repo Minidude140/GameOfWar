@@ -199,4 +199,73 @@ Module GameMechanicsModule
         'return the score requested for
         Return score
     End Function
+
+    ''' <summary>
+    ''' Interprets the dimensions of the array and returns value and suit as strings
+    ''' </summary>
+    ''' <param name="value"></param>
+    ''' <param name="suit"></param>
+    ''' <returns></returns>
+    Function DetermineCard(value As Integer, suit As Integer) As String()
+        Dim card(1) As String
+        'Determine suite of the card and set into card array
+        Select Case suit
+            Case = 0
+                'card is Hearts
+                card(1) = "Hearts"
+            Case = 1
+                'card is Diamonds
+                card(1) = "Diamonds"
+            Case = 2
+                'card is Clubs
+                card(1) = "Clubs"
+            Case = 3
+                'card is spades
+                card(1) = "Spades"
+        End Select
+        'Determine Value of card and set into array
+        Select Case value
+            Case = 0
+                'Card is Ace
+                card(0) = "ACE"
+            Case = 1
+                'Card is 2
+                card(0) = "2"
+            Case = 2
+                'Card is 3
+                card(0) = "3"
+            Case = 3
+                'Card is 4
+                card(0) = "4"
+            Case = 4
+                'Card is 5
+                card(0) = "5"
+            Case = 5
+                'Card is 6
+                card(0) = "6"
+            Case = 6
+                'Card is 7
+                card(0) = "7"
+            Case = 7
+                'Card is 8
+                card(0) = "8"
+            Case = 8
+                'Card is 9
+                card(0) = "9"
+            Case = 9
+                'Card is 10
+                card(0) = "10"
+            Case = 10
+                'Card is Jack
+                card(0) = "Jack"
+            Case = 11
+                'Card is Queen
+                card(0) = "Queen"
+            Case = 12
+                'Card is King
+                card(0) = "King"
+        End Select
+        'Return value, suit 
+        Return {card(0), card(1)}
+    End Function
 End Module

@@ -40,13 +40,13 @@ Partial Class GameGUIForm
         Me.ReShuffleDeckMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuitMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeckOfCardsPictureBox = New System.Windows.Forms.PictureBox()
-        Me.Player1CardPictureBox = New System.Windows.Forms.PictureBox()
         Me.Player2CardPictureBox = New System.Windows.Forms.PictureBox()
+        Me.Player1CardPictureBox = New System.Windows.Forms.PictureBox()
+        Me.DeckOfCardsPictureBox = New System.Windows.Forms.PictureBox()
         Me.WarMenuStrip.SuspendLayout()
-        CType(Me.DeckOfCardsPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Player1CardPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Player2CardPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Player1CardPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DeckOfCardsPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Player1Button
@@ -153,25 +153,25 @@ Partial Class GameGUIForm
         'Player1DrawCardMenuItem
         '
         Me.Player1DrawCardMenuItem.Name = "Player1DrawCardMenuItem"
-        Me.Player1DrawCardMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.Player1DrawCardMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.Player1DrawCardMenuItem.Text = "Player 1 Draw Card"
         '
         'Player2DrawCardMenuItem
         '
         Me.Player2DrawCardMenuItem.Name = "Player2DrawCardMenuItem"
-        Me.Player2DrawCardMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.Player2DrawCardMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.Player2DrawCardMenuItem.Text = "Player 2 Draw Card"
         '
         'RevealCardsMenuItem
         '
         Me.RevealCardsMenuItem.Name = "RevealCardsMenuItem"
-        Me.RevealCardsMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RevealCardsMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.RevealCardsMenuItem.Text = "Reveal Cards"
         '
         'ReShuffleDeckMenuItem
         '
         Me.ReShuffleDeckMenuItem.Name = "ReShuffleDeckMenuItem"
-        Me.ReShuffleDeckMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReShuffleDeckMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.ReShuffleDeckMenuItem.Text = "Re-Shuffle Deck"
         '
         'AboutMenuItem
@@ -186,19 +186,17 @@ Partial Class GameGUIForm
         Me.QuitMenuItem.Size = New System.Drawing.Size(42, 20)
         Me.QuitMenuItem.Text = "Quit"
         '
-        'DeckOfCardsPictureBox
+        'Player2CardPictureBox
         '
-        Me.DeckOfCardsPictureBox.BackgroundImage = Global.GameOfWar.My.Resources.Resources.CardBack1
-        Me.DeckOfCardsPictureBox.Location = New System.Drawing.Point(316, 154)
-        Me.DeckOfCardsPictureBox.Name = "DeckOfCardsPictureBox"
-        Me.DeckOfCardsPictureBox.Size = New System.Drawing.Size(62, 93)
-        Me.DeckOfCardsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.DeckOfCardsPictureBox.TabIndex = 11
-        Me.DeckOfCardsPictureBox.TabStop = False
+        Me.Player2CardPictureBox.Location = New System.Drawing.Point(506, 142)
+        Me.Player2CardPictureBox.Name = "Player2CardPictureBox"
+        Me.Player2CardPictureBox.Size = New System.Drawing.Size(62, 93)
+        Me.Player2CardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.Player2CardPictureBox.TabIndex = 13
+        Me.Player2CardPictureBox.TabStop = False
         '
         'Player1CardPictureBox
         '
-        Me.Player1CardPictureBox.BackgroundImage = Global.GameOfWar.My.Resources.Resources.CardBack1
         Me.Player1CardPictureBox.Location = New System.Drawing.Point(136, 142)
         Me.Player1CardPictureBox.Name = "Player1CardPictureBox"
         Me.Player1CardPictureBox.Size = New System.Drawing.Size(62, 93)
@@ -206,15 +204,14 @@ Partial Class GameGUIForm
         Me.Player1CardPictureBox.TabIndex = 12
         Me.Player1CardPictureBox.TabStop = False
         '
-        'Player2CardPictureBox
+        'DeckOfCardsPictureBox
         '
-        Me.Player2CardPictureBox.BackgroundImage = Global.GameOfWar.My.Resources.Resources.CardBack1
-        Me.Player2CardPictureBox.Location = New System.Drawing.Point(506, 142)
-        Me.Player2CardPictureBox.Name = "Player2CardPictureBox"
-        Me.Player2CardPictureBox.Size = New System.Drawing.Size(62, 93)
-        Me.Player2CardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.Player2CardPictureBox.TabIndex = 13
-        Me.Player2CardPictureBox.TabStop = False
+        Me.DeckOfCardsPictureBox.Location = New System.Drawing.Point(316, 154)
+        Me.DeckOfCardsPictureBox.Name = "DeckOfCardsPictureBox"
+        Me.DeckOfCardsPictureBox.Size = New System.Drawing.Size(62, 93)
+        Me.DeckOfCardsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.DeckOfCardsPictureBox.TabIndex = 11
+        Me.DeckOfCardsPictureBox.TabStop = False
         '
         'GameGUIForm
         '
@@ -240,9 +237,9 @@ Partial Class GameGUIForm
         Me.Text = "The Game of War"
         Me.WarMenuStrip.ResumeLayout(False)
         Me.WarMenuStrip.PerformLayout()
-        CType(Me.DeckOfCardsPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Player1CardPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Player2CardPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Player1CardPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DeckOfCardsPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
