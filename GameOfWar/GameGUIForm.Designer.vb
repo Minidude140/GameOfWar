@@ -75,7 +75,7 @@ Partial Class GameGUIForm
         Me.QuitButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.QuitButton.Name = "QuitButton"
         Me.QuitButton.Size = New System.Drawing.Size(116, 43)
-        Me.QuitButton.TabIndex = 3
+        Me.QuitButton.TabIndex = 9
         Me.QuitButton.Text = "Quit"
         Me.GameToolTip.SetToolTip(Me.QuitButton, "Exit this Program")
         Me.QuitButton.UseVisualStyleBackColor = True
@@ -86,7 +86,7 @@ Partial Class GameGUIForm
         Me.ResetGameButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ResetGameButton.Name = "ResetGameButton"
         Me.ResetGameButton.Size = New System.Drawing.Size(116, 43)
-        Me.ResetGameButton.TabIndex = 4
+        Me.ResetGameButton.TabIndex = 8
         Me.ResetGameButton.Text = "Re-Shuffle Deck"
         Me.GameToolTip.SetToolTip(Me.ResetGameButton, "Shuffle the Deck and Restart the Game.")
         Me.ResetGameButton.UseVisualStyleBackColor = True
