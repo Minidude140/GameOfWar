@@ -28,8 +28,6 @@ Partial Class GameGUIForm
         Me.ShowCardsButton = New System.Windows.Forms.Button()
         Me.QuitButton = New System.Windows.Forms.Button()
         Me.ResetGameButton = New System.Windows.Forms.Button()
-        Me.Player1CardLabel = New System.Windows.Forms.Label()
-        Me.Player2CardLabel = New System.Windows.Forms.Label()
         Me.Player1ScoreLabel = New System.Windows.Forms.Label()
         Me.Player2ScoreLabel = New System.Windows.Forms.Label()
         Me.CardsLeftLabel = New System.Windows.Forms.Label()
@@ -42,7 +40,13 @@ Partial Class GameGUIForm
         Me.ReShuffleDeckMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuitMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeckOfCardsPictureBox = New System.Windows.Forms.PictureBox()
+        Me.Player1CardPictureBox = New System.Windows.Forms.PictureBox()
+        Me.Player2CardPictureBox = New System.Windows.Forms.PictureBox()
         Me.WarMenuStrip.SuspendLayout()
+        CType(Me.DeckOfCardsPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Player1CardPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Player2CardPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Player1Button
@@ -100,26 +104,6 @@ Partial Class GameGUIForm
         Me.GameToolTip.SetToolTip(Me.ResetGameButton, "Shuffle the Deck and Restart the Game.")
         Me.ResetGameButton.UseVisualStyleBackColor = True
         '
-        'Player1CardLabel
-        '
-        Me.Player1CardLabel.AutoSize = True
-        Me.Player1CardLabel.Location = New System.Drawing.Point(170, 154)
-        Me.Player1CardLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Player1CardLabel.Name = "Player1CardLabel"
-        Me.Player1CardLabel.Size = New System.Drawing.Size(39, 13)
-        Me.Player1CardLabel.TabIndex = 5
-        Me.Player1CardLabel.Text = "Label1"
-        '
-        'Player2CardLabel
-        '
-        Me.Player2CardLabel.AutoSize = True
-        Me.Player2CardLabel.Location = New System.Drawing.Point(483, 154)
-        Me.Player2CardLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Player2CardLabel.Name = "Player2CardLabel"
-        Me.Player2CardLabel.Size = New System.Drawing.Size(39, 13)
-        Me.Player2CardLabel.TabIndex = 6
-        Me.Player2CardLabel.Text = "Label1"
-        '
         'Player1ScoreLabel
         '
         Me.Player1ScoreLabel.AutoSize = True
@@ -143,7 +127,7 @@ Partial Class GameGUIForm
         'CardsLeftLabel
         '
         Me.CardsLeftLabel.AutoSize = True
-        Me.CardsLeftLabel.Location = New System.Drawing.Point(335, 154)
+        Me.CardsLeftLabel.Location = New System.Drawing.Point(338, 115)
         Me.CardsLeftLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.CardsLeftLabel.Name = "CardsLeftLabel"
         Me.CardsLeftLabel.Size = New System.Drawing.Size(19, 13)
@@ -202,16 +186,47 @@ Partial Class GameGUIForm
         Me.QuitMenuItem.Size = New System.Drawing.Size(42, 20)
         Me.QuitMenuItem.Text = "Quit"
         '
+        'DeckOfCardsPictureBox
+        '
+        Me.DeckOfCardsPictureBox.BackgroundImage = Global.GameOfWar.My.Resources.Resources.CardBack1
+        Me.DeckOfCardsPictureBox.Location = New System.Drawing.Point(316, 154)
+        Me.DeckOfCardsPictureBox.Name = "DeckOfCardsPictureBox"
+        Me.DeckOfCardsPictureBox.Size = New System.Drawing.Size(62, 93)
+        Me.DeckOfCardsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.DeckOfCardsPictureBox.TabIndex = 11
+        Me.DeckOfCardsPictureBox.TabStop = False
+        '
+        'Player1CardPictureBox
+        '
+        Me.Player1CardPictureBox.BackgroundImage = Global.GameOfWar.My.Resources.Resources.CardBack1
+        Me.Player1CardPictureBox.Location = New System.Drawing.Point(136, 142)
+        Me.Player1CardPictureBox.Name = "Player1CardPictureBox"
+        Me.Player1CardPictureBox.Size = New System.Drawing.Size(62, 93)
+        Me.Player1CardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.Player1CardPictureBox.TabIndex = 12
+        Me.Player1CardPictureBox.TabStop = False
+        '
+        'Player2CardPictureBox
+        '
+        Me.Player2CardPictureBox.BackgroundImage = Global.GameOfWar.My.Resources.Resources.CardBack1
+        Me.Player2CardPictureBox.Location = New System.Drawing.Point(506, 142)
+        Me.Player2CardPictureBox.Name = "Player2CardPictureBox"
+        Me.Player2CardPictureBox.Size = New System.Drawing.Size(62, 93)
+        Me.Player2CardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.Player2CardPictureBox.TabIndex = 13
+        Me.Player2CardPictureBox.TabStop = False
+        '
         'GameGUIForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(715, 366)
+        Me.Controls.Add(Me.Player2CardPictureBox)
+        Me.Controls.Add(Me.Player1CardPictureBox)
+        Me.Controls.Add(Me.DeckOfCardsPictureBox)
         Me.Controls.Add(Me.CardsLeftLabel)
         Me.Controls.Add(Me.Player2ScoreLabel)
         Me.Controls.Add(Me.Player1ScoreLabel)
-        Me.Controls.Add(Me.Player2CardLabel)
-        Me.Controls.Add(Me.Player1CardLabel)
         Me.Controls.Add(Me.ResetGameButton)
         Me.Controls.Add(Me.QuitButton)
         Me.Controls.Add(Me.ShowCardsButton)
@@ -225,6 +240,9 @@ Partial Class GameGUIForm
         Me.Text = "The Game of War"
         Me.WarMenuStrip.ResumeLayout(False)
         Me.WarMenuStrip.PerformLayout()
+        CType(Me.DeckOfCardsPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Player1CardPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Player2CardPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -235,8 +253,6 @@ Partial Class GameGUIForm
     Friend WithEvents ShowCardsButton As Button
     Friend WithEvents QuitButton As Button
     Friend WithEvents ResetGameButton As Button
-    Friend WithEvents Player1CardLabel As Label
-    Friend WithEvents Player2CardLabel As Label
     Friend WithEvents Player1ScoreLabel As Label
     Friend WithEvents Player2ScoreLabel As Label
     Friend WithEvents CardsLeftLabel As Label
@@ -249,4 +265,7 @@ Partial Class GameGUIForm
     Friend WithEvents ReShuffleDeckMenuItem As ToolStripMenuItem
     Friend WithEvents AboutMenuItem As ToolStripMenuItem
     Friend WithEvents QuitMenuItem As ToolStripMenuItem
+    Friend WithEvents DeckOfCardsPictureBox As PictureBox
+    Friend WithEvents Player1CardPictureBox As PictureBox
+    Friend WithEvents Player2CardPictureBox As PictureBox
 End Class

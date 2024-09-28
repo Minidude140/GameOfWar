@@ -138,5 +138,206 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CardBack1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CardDeckEmpty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs 13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds 13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty 13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts 13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades 13.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

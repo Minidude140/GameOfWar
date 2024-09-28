@@ -6,9 +6,9 @@
 'This Form Handles the GUI Input and Output to and from the User
 
 'TODO
-'[]Graphics for Deck
-'**[]Display Deck Full
-'**[]Display Deck Empty
+'[*]Graphics for Deck
+'**[*]Display Deck Full
+'**[*]Display Deck Empty
 '[]Graphics for Player Cards
 '**[]Display Back of Cards When Drawn
 '**[]Display Cards Shown
@@ -24,6 +24,7 @@
 '[*]Tool Tips
 '[*]Tab Stops
 
+Imports System.Threading
 Public Class GameGUIForm
     Sub ResetGUI()
         'Allow player 1 to draw a card
@@ -42,6 +43,7 @@ Public Class GameGUIForm
         Player2CardLabel.Text = ""
         'Reset Remaining number of cards
         CardsLeftLabel.Text = $"{52 - CardCount()}"
+        DeckOfCardsPictureBox.BackgroundImage = GameOfWar.My.Resources.Resources.CardBack1
     End Sub
 
     Private Sub GameGUIForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -112,6 +114,8 @@ Public Class GameGUIForm
         End If
         'If there are no more cards initiate Game End
         If CardCount() = 52 Then
+            DeckOfCardsPictureBox.BackgroundImage = GameOfWar.My.Resources.CardDeckEmpty
+            Thread.Sleep(500)
             GameEndForm.Show()
             'Reset Card Deck, Player hands, and scores
             ResestGame()
