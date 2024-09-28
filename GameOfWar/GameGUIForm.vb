@@ -19,7 +19,7 @@
 '**[*]SHow Hands Button
 '**[*]Reset Game Button
 '[]Game End Screen
-'[]About Form
+'[*]About Form
 '[*]Menu Strips
 '[*]Tool Tips
 '[*]Tab Stops
@@ -134,4 +134,8 @@ Public Class GameGUIForm
         Player1DrawCardMenuItem.Enabled = True
     End Sub
 
+    Private Sub AboutMenuItem_Click(sender As Object, e As EventArgs) Handles AboutMenuItem.Click
+        'open the about this program form
+        AboutForm.Show()
+    End Sub
 End Class
