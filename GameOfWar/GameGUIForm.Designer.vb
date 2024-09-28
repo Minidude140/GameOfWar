@@ -43,10 +43,16 @@ Partial Class GameGUIForm
         Me.Player2CardPictureBox = New System.Windows.Forms.PictureBox()
         Me.Player1CardPictureBox = New System.Windows.Forms.PictureBox()
         Me.DeckOfCardsPictureBox = New System.Windows.Forms.PictureBox()
+        Me.Player1ScoreTitleLabel = New System.Windows.Forms.Label()
+        Me.Player2ScoreTitleLabel = New System.Windows.Forms.Label()
+        Me.Player1CardsWonPictureBox = New System.Windows.Forms.PictureBox()
+        Me.Player2CardsWonPictureBox = New System.Windows.Forms.PictureBox()
         Me.WarMenuStrip.SuspendLayout()
         CType(Me.Player2CardPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Player1CardPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DeckOfCardsPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Player1CardsWonPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Player2CardsWonPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Player1Button
@@ -107,7 +113,7 @@ Partial Class GameGUIForm
         'Player1ScoreLabel
         '
         Me.Player1ScoreLabel.AutoSize = True
-        Me.Player1ScoreLabel.Location = New System.Drawing.Point(20, 47)
+        Me.Player1ScoreLabel.Location = New System.Drawing.Point(153, 73)
         Me.Player1ScoreLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Player1ScoreLabel.Name = "Player1ScoreLabel"
         Me.Player1ScoreLabel.Size = New System.Drawing.Size(13, 13)
@@ -117,7 +123,7 @@ Partial Class GameGUIForm
         'Player2ScoreLabel
         '
         Me.Player2ScoreLabel.AutoSize = True
-        Me.Player2ScoreLabel.Location = New System.Drawing.Point(642, 47)
+        Me.Player2ScoreLabel.Location = New System.Drawing.Point(536, 73)
         Me.Player2ScoreLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Player2ScoreLabel.Name = "Player2ScoreLabel"
         Me.Player2ScoreLabel.Size = New System.Drawing.Size(13, 13)
@@ -213,11 +219,55 @@ Partial Class GameGUIForm
         Me.DeckOfCardsPictureBox.TabIndex = 11
         Me.DeckOfCardsPictureBox.TabStop = False
         '
+        'Player1ScoreTitleLabel
+        '
+        Me.Player1ScoreTitleLabel.AutoSize = True
+        Me.Player1ScoreTitleLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Player1ScoreTitleLabel.Location = New System.Drawing.Point(117, 47)
+        Me.Player1ScoreTitleLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Player1ScoreTitleLabel.Name = "Player1ScoreTitleLabel"
+        Me.Player1ScoreTitleLabel.Size = New System.Drawing.Size(81, 13)
+        Me.Player1ScoreTitleLabel.TabIndex = 14
+        Me.Player1ScoreTitleLabel.Text = "Player 1s Score"
+        '
+        'Player2ScoreTitleLabel
+        '
+        Me.Player2ScoreTitleLabel.AutoSize = True
+        Me.Player2ScoreTitleLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Player2ScoreTitleLabel.Location = New System.Drawing.Point(503, 47)
+        Me.Player2ScoreTitleLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Player2ScoreTitleLabel.Name = "Player2ScoreTitleLabel"
+        Me.Player2ScoreTitleLabel.Size = New System.Drawing.Size(81, 13)
+        Me.Player2ScoreTitleLabel.TabIndex = 15
+        Me.Player2ScoreTitleLabel.Text = "Player 2s Score"
+        '
+        'Player1CardsWonPictureBox
+        '
+        Me.Player1CardsWonPictureBox.Location = New System.Drawing.Point(24, 47)
+        Me.Player1CardsWonPictureBox.Name = "Player1CardsWonPictureBox"
+        Me.Player1CardsWonPictureBox.Size = New System.Drawing.Size(62, 93)
+        Me.Player1CardsWonPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.Player1CardsWonPictureBox.TabIndex = 16
+        Me.Player1CardsWonPictureBox.TabStop = False
+        '
+        'Player2CardsWonPictureBox
+        '
+        Me.Player2CardsWonPictureBox.Location = New System.Drawing.Point(622, 47)
+        Me.Player2CardsWonPictureBox.Name = "Player2CardsWonPictureBox"
+        Me.Player2CardsWonPictureBox.Size = New System.Drawing.Size(62, 93)
+        Me.Player2CardsWonPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.Player2CardsWonPictureBox.TabIndex = 17
+        Me.Player2CardsWonPictureBox.TabStop = False
+        '
         'GameGUIForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(715, 366)
+        Me.Controls.Add(Me.Player2CardsWonPictureBox)
+        Me.Controls.Add(Me.Player1CardsWonPictureBox)
+        Me.Controls.Add(Me.Player2ScoreTitleLabel)
+        Me.Controls.Add(Me.Player1ScoreTitleLabel)
         Me.Controls.Add(Me.Player2CardPictureBox)
         Me.Controls.Add(Me.Player1CardPictureBox)
         Me.Controls.Add(Me.DeckOfCardsPictureBox)
@@ -240,6 +290,8 @@ Partial Class GameGUIForm
         CType(Me.Player2CardPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Player1CardPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DeckOfCardsPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Player1CardsWonPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Player2CardsWonPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -265,4 +317,8 @@ Partial Class GameGUIForm
     Friend WithEvents DeckOfCardsPictureBox As PictureBox
     Friend WithEvents Player1CardPictureBox As PictureBox
     Friend WithEvents Player2CardPictureBox As PictureBox
+    Friend WithEvents Player1ScoreTitleLabel As Label
+    Friend WithEvents Player2ScoreTitleLabel As Label
+    Friend WithEvents Player1CardsWonPictureBox As PictureBox
+    Friend WithEvents Player2CardsWonPictureBox As PictureBox
 End Class

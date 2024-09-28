@@ -9,10 +9,10 @@
 '[*]Graphics for Deck
 '**[*]Display Deck Full
 '**[*]Display Deck Empty
-'[]Graphics for Player Cards
+'[*]Graphics for Player Cards
 '**[*]Display Back of Cards When Drawn
 '**[*]Display Cards Shown
-'**[]Display Cards Won (Stack)
+'**[*]Display Cards Won (Stack)
 '[*]User input
 '**[*]Player 1 Draw Card Button
 '**[*]Player 2 Draw Card Button
@@ -398,7 +398,9 @@ Public Class GameGUIForm
         RevealCardsMenuItem.Enabled = False
         'Reset player score labels
         Player1ScoreLabel.Text = "0"
+        Player1CardsWonPictureBox.BackgroundImage = GameOfWar.My.Resources.CardDeckEmpty
         Player2ScoreLabel.Text = "0"
+        Player2CardsWonPictureBox.BackgroundImage = GameOfWar.My.Resources.CardDeckEmpty
         'Reset Players Hands Label
         Player1CardPictureBox.BackgroundImage = GameOfWar.My.Resources.CardDeckEmpty
         Player2CardPictureBox.BackgroundImage = GameOfWar.My.Resources.CardDeckEmpty
@@ -466,9 +468,13 @@ Public Class GameGUIForm
         If CompareCardValues(True)(0) = 1 Then
             'Player 1 has won display updated score
             Player1ScoreLabel.Text = $"{CompareCardValues()(1)}"
+            'display cards won stack
+            Player1CardsWonPictureBox.BackgroundImage = GameOfWar.My.Resources.CardBack1
         ElseIf CompareCardValues()(0) = 2 Then
             'Player 2 has won display updated score
             Player2ScoreLabel.Text = $"{CompareCardValues()(1)}"
+            'display cards won stack
+            Player2CardsWonPictureBox.BackgroundImage = GameOfWar.My.Resources.CardBack1
         Else
             'Round is a tie.  Report to User
             MsgBox("This round is a tie!")
