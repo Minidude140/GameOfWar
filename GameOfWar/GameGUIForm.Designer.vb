@@ -34,12 +34,21 @@ Partial Class GameGUIForm
         Me.Player2ScoreLabel = New System.Windows.Forms.Label()
         Me.CardsLeftLabel = New System.Windows.Forms.Label()
         Me.GameToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.WarMenuStrip = New System.Windows.Forms.MenuStrip()
+        Me.GameActionsMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Player1DrawCardMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Player2DrawCardMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RevealCardsMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReShuffleDeckMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuitMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WarMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'Player1Button
         '
         Me.Player1Button.Location = New System.Drawing.Point(2, 154)
-        Me.Player1Button.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Player1Button.Margin = New System.Windows.Forms.Padding(2)
         Me.Player1Button.Name = "Player1Button"
         Me.Player1Button.Size = New System.Drawing.Size(116, 43)
         Me.Player1Button.TabIndex = 0
@@ -50,7 +59,7 @@ Partial Class GameGUIForm
         'Player2Button
         '
         Me.Player2Button.Location = New System.Drawing.Point(590, 154)
-        Me.Player2Button.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Player2Button.Margin = New System.Windows.Forms.Padding(2)
         Me.Player2Button.Name = "Player2Button"
         Me.Player2Button.Size = New System.Drawing.Size(116, 43)
         Me.Player2Button.TabIndex = 1
@@ -60,8 +69,8 @@ Partial Class GameGUIForm
         '
         'ShowCardsButton
         '
-        Me.ShowCardsButton.Location = New System.Drawing.Point(296, 10)
-        Me.ShowCardsButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ShowCardsButton.Location = New System.Drawing.Point(296, 26)
+        Me.ShowCardsButton.Margin = New System.Windows.Forms.Padding(2)
         Me.ShowCardsButton.Name = "ShowCardsButton"
         Me.ShowCardsButton.Size = New System.Drawing.Size(116, 43)
         Me.ShowCardsButton.TabIndex = 2
@@ -72,7 +81,7 @@ Partial Class GameGUIForm
         'QuitButton
         '
         Me.QuitButton.Location = New System.Drawing.Point(590, 313)
-        Me.QuitButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.QuitButton.Margin = New System.Windows.Forms.Padding(2)
         Me.QuitButton.Name = "QuitButton"
         Me.QuitButton.Size = New System.Drawing.Size(116, 43)
         Me.QuitButton.TabIndex = 9
@@ -83,7 +92,7 @@ Partial Class GameGUIForm
         'ResetGameButton
         '
         Me.ResetGameButton.Location = New System.Drawing.Point(296, 313)
-        Me.ResetGameButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ResetGameButton.Margin = New System.Windows.Forms.Padding(2)
         Me.ResetGameButton.Name = "ResetGameButton"
         Me.ResetGameButton.Size = New System.Drawing.Size(116, 43)
         Me.ResetGameButton.TabIndex = 8
@@ -141,6 +150,58 @@ Partial Class GameGUIForm
         Me.CardsLeftLabel.TabIndex = 9
         Me.CardsLeftLabel.Text = "52"
         '
+        'WarMenuStrip
+        '
+        Me.WarMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GameActionsMenuItem, Me.AboutMenuItem, Me.QuitMenuItem})
+        Me.WarMenuStrip.Location = New System.Drawing.Point(0, 0)
+        Me.WarMenuStrip.Name = "WarMenuStrip"
+        Me.WarMenuStrip.Size = New System.Drawing.Size(715, 24)
+        Me.WarMenuStrip.TabIndex = 10
+        Me.WarMenuStrip.Text = "MenuStrip1"
+        '
+        'GameActionsMenuItem
+        '
+        Me.GameActionsMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Player1DrawCardMenuItem, Me.Player2DrawCardMenuItem, Me.RevealCardsMenuItem, Me.ReShuffleDeckMenuItem})
+        Me.GameActionsMenuItem.Name = "GameActionsMenuItem"
+        Me.GameActionsMenuItem.Size = New System.Drawing.Size(93, 20)
+        Me.GameActionsMenuItem.Text = "Game Actions"
+        '
+        'Player1DrawCardMenuItem
+        '
+        Me.Player1DrawCardMenuItem.Name = "Player1DrawCardMenuItem"
+        Me.Player1DrawCardMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.Player1DrawCardMenuItem.Text = "Player 1 Draw Card"
+        '
+        'Player2DrawCardMenuItem
+        '
+        Me.Player2DrawCardMenuItem.Name = "Player2DrawCardMenuItem"
+        Me.Player2DrawCardMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.Player2DrawCardMenuItem.Text = "Player 2 Draw Card"
+        '
+        'RevealCardsMenuItem
+        '
+        Me.RevealCardsMenuItem.Name = "RevealCardsMenuItem"
+        Me.RevealCardsMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RevealCardsMenuItem.Text = "Reveal Cards"
+        '
+        'ReShuffleDeckMenuItem
+        '
+        Me.ReShuffleDeckMenuItem.Name = "ReShuffleDeckMenuItem"
+        Me.ReShuffleDeckMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReShuffleDeckMenuItem.Text = "Re-Shuffle Deck"
+        '
+        'AboutMenuItem
+        '
+        Me.AboutMenuItem.Name = "AboutMenuItem"
+        Me.AboutMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.AboutMenuItem.Text = "About"
+        '
+        'QuitMenuItem
+        '
+        Me.QuitMenuItem.Name = "QuitMenuItem"
+        Me.QuitMenuItem.Size = New System.Drawing.Size(42, 20)
+        Me.QuitMenuItem.Text = "Quit"
+        '
         'GameGUIForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -156,9 +217,13 @@ Partial Class GameGUIForm
         Me.Controls.Add(Me.ShowCardsButton)
         Me.Controls.Add(Me.Player2Button)
         Me.Controls.Add(Me.Player1Button)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Controls.Add(Me.WarMenuStrip)
+        Me.MainMenuStrip = Me.WarMenuStrip
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "GameGUIForm"
-        Me.Text = "Form1"
+        Me.Text = "The Game of War"
+        Me.WarMenuStrip.ResumeLayout(False)
+        Me.WarMenuStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -175,4 +240,12 @@ Partial Class GameGUIForm
     Friend WithEvents Player2ScoreLabel As Label
     Friend WithEvents CardsLeftLabel As Label
     Friend WithEvents GameToolTip As ToolTip
+    Friend WithEvents WarMenuStrip As MenuStrip
+    Friend WithEvents GameActionsMenuItem As ToolStripMenuItem
+    Friend WithEvents Player1DrawCardMenuItem As ToolStripMenuItem
+    Friend WithEvents Player2DrawCardMenuItem As ToolStripMenuItem
+    Friend WithEvents RevealCardsMenuItem As ToolStripMenuItem
+    Friend WithEvents ReShuffleDeckMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutMenuItem As ToolStripMenuItem
+    Friend WithEvents QuitMenuItem As ToolStripMenuItem
 End Class

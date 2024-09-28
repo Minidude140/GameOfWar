@@ -20,17 +20,20 @@
 '**[*]Reset Game Button
 '[]Game End Screen
 '[]About Form
-'[]Menu Strips
+'[*]Menu Strips
 '[*]Tool Tips
-'[]Tab Stops
+'[*]Tab Stops
 
 Public Class GameGUIForm
     Sub ResetGUI()
         'Allow player 1 to draw a card
         Player1Button.Enabled = True
+        Player1DrawCardMenuItem.Enabled = True
         'Disable Player 2 drawing a card and Showing Cards
         Player2Button.Enabled = False
+        Player2DrawCardMenuItem.Enabled = False
         ShowCardsButton.Enabled = False
+        RevealCardsMenuItem.Enabled = False
         'Reset player score labels
         Player1ScoreLabel.Text = "0"
         Player2ScoreLabel.Text = "0"
@@ -40,6 +43,7 @@ Public Class GameGUIForm
         'Reset Remaining number of cards
         CardsLeftLabel.Text = $"{52 - CardCount()}"
     End Sub
+
     Private Sub GameGUIForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Reset Game Mechanics (card deck and scores)
         ResestGame()
@@ -47,18 +51,21 @@ Public Class GameGUIForm
         ResetGUI()
     End Sub
 
-    Private Sub QuitButton_Click(sender As Object, e As EventArgs) Handles QuitButton.Click
+    Private Sub QuitButton_Click(sender As Object, e As EventArgs) Handles QuitButton.Click,
+                                                                           QuitMenuItem.Click
         Me.Close()
     End Sub
 
-    Private Sub ResetGameButton_Click(sender As Object, e As EventArgs) Handles ResetGameButton.Click
+    Private Sub ResetGameButton_Click(sender As Object, e As EventArgs) Handles ResetGameButton.Click,
+                                                                                ReShuffleDeckMenuItem.Click
         'Reset Game Mechanics (card deck and scores)
         ResestGame()
         'Reset GUI (Player Labels and cards left)
         ResetGUI()
     End Sub
 
-    Private Sub Player1Button_Click(sender As Object, e As EventArgs) Handles Player1Button.Click
+    Private Sub Player1Button_Click(sender As Object, e As EventArgs) Handles Player1Button.Click,
+                                                                              Player1DrawCardMenuItem.Click
         'Draw a card and give to player 1
         GivePlayerCard(1, DrawCard())
         'Decrement the number of cards remaining and update label
@@ -67,10 +74,13 @@ Public Class GameGUIForm
         Player1CardLabel.Text = "Player 1 Has a Card"
         'Allow player 2 to draw a card
         Player1Button.Enabled = False
+        Player1DrawCardMenuItem.Enabled = False
         Player2Button.Enabled = True
+        Player2DrawCardMenuItem.Enabled = True
     End Sub
 
-    Private Sub Player2Button_Click(sender As Object, e As EventArgs) Handles Player2Button.Click
+    Private Sub Player2Button_Click(sender As Object, e As EventArgs) Handles Player2Button.Click,
+                                                                              Player2DrawCardMenuItem.Click
         'Draw a card and give it to player 2
         GivePlayerCard(2, DrawCard())
         'Decrement the number of cards remaining and update label
@@ -78,12 +88,14 @@ Public Class GameGUIForm
         'Display Player 2's card
         Player2CardLabel.Text = "Player 2 Has a Card"
         'Allow user to Reveal cards
-        Player1Button.Enabled = False
         Player2Button.Enabled = False
+        Player2DrawCardMenuItem.Enabled = False
         ShowCardsButton.Enabled = True
+        RevealCardsMenuItem.Enabled = True
     End Sub
 
-    Private Sub ShowCardsButton_Click(sender As Object, e As EventArgs) Handles ShowCardsButton.Click
+    Private Sub ShowCardsButton_Click(sender As Object, e As EventArgs) Handles ShowCardsButton.Click,
+                                                                                RevealCardsMenuItem.Click
         'Show Player Cards
         Player1CardLabel.Text = $"{playerHands(0, 0)}  {playerHands(0, 1)}"
         Player2CardLabel.Text = $"{playerHands(1, 0)}  {playerHands(1, 1)}"
@@ -117,6 +129,9 @@ Public Class GameGUIForm
         End If
         'Allow Player 1 to Draw another Card
         ShowCardsButton.Enabled = False
+        RevealCardsMenuItem.Enabled = False
         Player1Button.Enabled = True
+        Player1DrawCardMenuItem.Enabled = True
     End Sub
+
 End Class
