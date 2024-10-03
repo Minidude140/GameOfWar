@@ -59,24 +59,24 @@ Partial Class GameGUIForm
         'Player1Button
         '
         Me.Player1Button.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Player1Button.Location = New System.Drawing.Point(2, 134)
-        Me.Player1Button.Margin = New System.Windows.Forms.Padding(2)
+        Me.Player1Button.Location = New System.Drawing.Point(3, 165)
+        Me.Player1Button.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Player1Button.Name = "Player1Button"
-        Me.Player1Button.Size = New System.Drawing.Size(116, 43)
+        Me.Player1Button.Size = New System.Drawing.Size(155, 53)
         Me.Player1Button.TabIndex = 0
-        Me.Player1Button.Text = "Player 1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Draw Card"
+        Me.Player1Button.Text = "Player &1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Draw Card"
         Me.GameToolTip.SetToolTip(Me.Player1Button, "Draw a card for Player 1")
         Me.Player1Button.UseVisualStyleBackColor = True
         '
         'Player2Button
         '
         Me.Player2Button.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Player2Button.Location = New System.Drawing.Point(532, 134)
-        Me.Player2Button.Margin = New System.Windows.Forms.Padding(2)
+        Me.Player2Button.Location = New System.Drawing.Point(709, 165)
+        Me.Player2Button.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Player2Button.Name = "Player2Button"
-        Me.Player2Button.Size = New System.Drawing.Size(116, 43)
+        Me.Player2Button.Size = New System.Drawing.Size(155, 53)
         Me.Player2Button.TabIndex = 1
-        Me.Player2Button.Text = "Player 2" & Global.Microsoft.VisualBasic.ChrW(10) & "Draw Card"
+        Me.Player2Button.Text = "Player &2" & Global.Microsoft.VisualBasic.ChrW(10) & "Draw Card"
         Me.GameToolTip.SetToolTip(Me.Player2Button, "Draw a Card for Player 2")
         Me.Player2Button.UseVisualStyleBackColor = True
         '
@@ -84,36 +84,36 @@ Partial Class GameGUIForm
         '
         Me.ShowCardsButton.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ShowCardsButton.Location = New System.Drawing.Point(296, 26)
-        Me.ShowCardsButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.ShowCardsButton.Location = New System.Drawing.Point(395, 32)
+        Me.ShowCardsButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ShowCardsButton.Name = "ShowCardsButton"
-        Me.ShowCardsButton.Size = New System.Drawing.Size(58, 43)
+        Me.ShowCardsButton.Size = New System.Drawing.Size(77, 53)
         Me.ShowCardsButton.TabIndex = 2
-        Me.ShowCardsButton.Text = "Reveal" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cards"
+        Me.ShowCardsButton.Text = "&Reveal" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cards"
         Me.GameToolTip.SetToolTip(Me.ShowCardsButton, "Flip over The Cards.")
         Me.ShowCardsButton.UseVisualStyleBackColor = True
         '
         'QuitButton
         '
         Me.QuitButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.QuitButton.Location = New System.Drawing.Point(532, 273)
-        Me.QuitButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.QuitButton.Location = New System.Drawing.Point(709, 336)
+        Me.QuitButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.QuitButton.Name = "QuitButton"
-        Me.QuitButton.Size = New System.Drawing.Size(116, 43)
+        Me.QuitButton.Size = New System.Drawing.Size(155, 53)
         Me.QuitButton.TabIndex = 9
-        Me.QuitButton.Text = "Quit"
+        Me.QuitButton.Text = "&Quit"
         Me.GameToolTip.SetToolTip(Me.QuitButton, "Exit this Program")
         Me.QuitButton.UseVisualStyleBackColor = True
         '
         'ResetGameButton
         '
         Me.ResetGameButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.ResetGameButton.Location = New System.Drawing.Point(267, 273)
-        Me.ResetGameButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.ResetGameButton.Location = New System.Drawing.Point(356, 336)
+        Me.ResetGameButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ResetGameButton.Name = "ResetGameButton"
-        Me.ResetGameButton.Size = New System.Drawing.Size(116, 43)
+        Me.ResetGameButton.Size = New System.Drawing.Size(155, 53)
         Me.ResetGameButton.TabIndex = 8
-        Me.ResetGameButton.Text = "Re-Shuffle Deck"
+        Me.ResetGameButton.Text = "Re-&Shuffle Deck"
         Me.GameToolTip.SetToolTip(Me.ResetGameButton, "Shuffle the Deck and Restart the Game.")
         Me.ResetGameButton.UseVisualStyleBackColor = True
         '
@@ -121,10 +121,9 @@ Partial Class GameGUIForm
         '
         Me.Player1ScoreLabel.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Player1ScoreLabel.AutoSize = True
-        Me.Player1ScoreLabel.Location = New System.Drawing.Point(153, 53)
-        Me.Player1ScoreLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Player1ScoreLabel.Location = New System.Drawing.Point(204, 65)
         Me.Player1ScoreLabel.Name = "Player1ScoreLabel"
-        Me.Player1ScoreLabel.Size = New System.Drawing.Size(13, 13)
+        Me.Player1ScoreLabel.Size = New System.Drawing.Size(16, 17)
         Me.Player1ScoreLabel.TabIndex = 7
         Me.Player1ScoreLabel.Text = "0"
         '
@@ -132,10 +131,9 @@ Partial Class GameGUIForm
         '
         Me.Player2ScoreLabel.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Player2ScoreLabel.AutoSize = True
-        Me.Player2ScoreLabel.Location = New System.Drawing.Point(478, 53)
-        Me.Player2ScoreLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Player2ScoreLabel.Location = New System.Drawing.Point(637, 65)
         Me.Player2ScoreLabel.Name = "Player2ScoreLabel"
-        Me.Player2ScoreLabel.Size = New System.Drawing.Size(13, 13)
+        Me.Player2ScoreLabel.Size = New System.Drawing.Size(16, 17)
         Me.Player2ScoreLabel.TabIndex = 8
         Me.Player2ScoreLabel.Text = "0"
         '
@@ -143,19 +141,19 @@ Partial Class GameGUIForm
         '
         Me.CardsLeftLabel.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CardsLeftLabel.AutoSize = True
-        Me.CardsLeftLabel.Location = New System.Drawing.Point(316, 124)
-        Me.CardsLeftLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.CardsLeftLabel.Location = New System.Drawing.Point(421, 153)
         Me.CardsLeftLabel.Name = "CardsLeftLabel"
-        Me.CardsLeftLabel.Size = New System.Drawing.Size(19, 13)
+        Me.CardsLeftLabel.Size = New System.Drawing.Size(24, 17)
         Me.CardsLeftLabel.TabIndex = 9
         Me.CardsLeftLabel.Text = "52"
         '
         'WarMenuStrip
         '
+        Me.WarMenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.WarMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GameActionsMenuItem, Me.AboutMenuItem, Me.QuitMenuItem})
         Me.WarMenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.WarMenuStrip.Name = "WarMenuStrip"
-        Me.WarMenuStrip.Size = New System.Drawing.Size(657, 24)
+        Me.WarMenuStrip.Size = New System.Drawing.Size(876, 28)
         Me.WarMenuStrip.TabIndex = 10
         Me.WarMenuStrip.Text = "MenuStrip1"
         '
@@ -163,51 +161,52 @@ Partial Class GameGUIForm
         '
         Me.GameActionsMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Player1DrawCardMenuItem, Me.Player2DrawCardMenuItem, Me.RevealCardsMenuItem, Me.ReShuffleDeckMenuItem})
         Me.GameActionsMenuItem.Name = "GameActionsMenuItem"
-        Me.GameActionsMenuItem.Size = New System.Drawing.Size(93, 20)
+        Me.GameActionsMenuItem.Size = New System.Drawing.Size(115, 24)
         Me.GameActionsMenuItem.Text = "Game Actions"
         '
         'Player1DrawCardMenuItem
         '
         Me.Player1DrawCardMenuItem.Name = "Player1DrawCardMenuItem"
-        Me.Player1DrawCardMenuItem.Size = New System.Drawing.Size(173, 22)
+        Me.Player1DrawCardMenuItem.Size = New System.Drawing.Size(218, 26)
         Me.Player1DrawCardMenuItem.Text = "Player 1 Draw Card"
         '
         'Player2DrawCardMenuItem
         '
         Me.Player2DrawCardMenuItem.Name = "Player2DrawCardMenuItem"
-        Me.Player2DrawCardMenuItem.Size = New System.Drawing.Size(173, 22)
+        Me.Player2DrawCardMenuItem.Size = New System.Drawing.Size(218, 26)
         Me.Player2DrawCardMenuItem.Text = "Player 2 Draw Card"
         '
         'RevealCardsMenuItem
         '
         Me.RevealCardsMenuItem.Name = "RevealCardsMenuItem"
-        Me.RevealCardsMenuItem.Size = New System.Drawing.Size(173, 22)
+        Me.RevealCardsMenuItem.Size = New System.Drawing.Size(218, 26)
         Me.RevealCardsMenuItem.Text = "Reveal Cards"
         '
         'ReShuffleDeckMenuItem
         '
         Me.ReShuffleDeckMenuItem.Name = "ReShuffleDeckMenuItem"
-        Me.ReShuffleDeckMenuItem.Size = New System.Drawing.Size(173, 22)
+        Me.ReShuffleDeckMenuItem.Size = New System.Drawing.Size(218, 26)
         Me.ReShuffleDeckMenuItem.Text = "Re-Shuffle Deck"
         '
         'AboutMenuItem
         '
         Me.AboutMenuItem.Name = "AboutMenuItem"
-        Me.AboutMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.AboutMenuItem.Size = New System.Drawing.Size(64, 24)
         Me.AboutMenuItem.Text = "About"
         '
         'QuitMenuItem
         '
         Me.QuitMenuItem.Name = "QuitMenuItem"
-        Me.QuitMenuItem.Size = New System.Drawing.Size(42, 20)
+        Me.QuitMenuItem.Size = New System.Drawing.Size(51, 24)
         Me.QuitMenuItem.Text = "Quit"
         '
         'Player2CardPictureBox
         '
         Me.Player2CardPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Player2CardPictureBox.Location = New System.Drawing.Point(448, 122)
+        Me.Player2CardPictureBox.Location = New System.Drawing.Point(597, 150)
+        Me.Player2CardPictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Player2CardPictureBox.Name = "Player2CardPictureBox"
-        Me.Player2CardPictureBox.Size = New System.Drawing.Size(62, 93)
+        Me.Player2CardPictureBox.Size = New System.Drawing.Size(83, 114)
         Me.Player2CardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.Player2CardPictureBox.TabIndex = 13
         Me.Player2CardPictureBox.TabStop = False
@@ -215,9 +214,10 @@ Partial Class GameGUIForm
         'Player1CardPictureBox
         '
         Me.Player1CardPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Player1CardPictureBox.Location = New System.Drawing.Point(136, 122)
+        Me.Player1CardPictureBox.Location = New System.Drawing.Point(181, 150)
+        Me.Player1CardPictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Player1CardPictureBox.Name = "Player1CardPictureBox"
-        Me.Player1CardPictureBox.Size = New System.Drawing.Size(62, 93)
+        Me.Player1CardPictureBox.Size = New System.Drawing.Size(83, 114)
         Me.Player1CardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.Player1CardPictureBox.TabIndex = 12
         Me.Player1CardPictureBox.TabStop = False
@@ -225,9 +225,10 @@ Partial Class GameGUIForm
         'DeckOfCardsPictureBox
         '
         Me.DeckOfCardsPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.DeckOfCardsPictureBox.Location = New System.Drawing.Point(293, 155)
+        Me.DeckOfCardsPictureBox.Location = New System.Drawing.Point(391, 191)
+        Me.DeckOfCardsPictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DeckOfCardsPictureBox.Name = "DeckOfCardsPictureBox"
-        Me.DeckOfCardsPictureBox.Size = New System.Drawing.Size(62, 93)
+        Me.DeckOfCardsPictureBox.Size = New System.Drawing.Size(83, 114)
         Me.DeckOfCardsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.DeckOfCardsPictureBox.TabIndex = 11
         Me.DeckOfCardsPictureBox.TabStop = False
@@ -237,10 +238,9 @@ Partial Class GameGUIForm
         Me.Player1ScoreTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Player1ScoreTitleLabel.AutoSize = True
         Me.Player1ScoreTitleLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Player1ScoreTitleLabel.Location = New System.Drawing.Point(117, 27)
-        Me.Player1ScoreTitleLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Player1ScoreTitleLabel.Location = New System.Drawing.Point(156, 33)
         Me.Player1ScoreTitleLabel.Name = "Player1ScoreTitleLabel"
-        Me.Player1ScoreTitleLabel.Size = New System.Drawing.Size(81, 13)
+        Me.Player1ScoreTitleLabel.Size = New System.Drawing.Size(108, 17)
         Me.Player1ScoreTitleLabel.TabIndex = 14
         Me.Player1ScoreTitleLabel.Text = "Player 1s Score"
         '
@@ -249,19 +249,19 @@ Partial Class GameGUIForm
         Me.Player2ScoreTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Player2ScoreTitleLabel.AutoSize = True
         Me.Player2ScoreTitleLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Player2ScoreTitleLabel.Location = New System.Drawing.Point(445, 27)
-        Me.Player2ScoreTitleLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Player2ScoreTitleLabel.Location = New System.Drawing.Point(593, 33)
         Me.Player2ScoreTitleLabel.Name = "Player2ScoreTitleLabel"
-        Me.Player2ScoreTitleLabel.Size = New System.Drawing.Size(81, 13)
+        Me.Player2ScoreTitleLabel.Size = New System.Drawing.Size(108, 17)
         Me.Player2ScoreTitleLabel.TabIndex = 15
         Me.Player2ScoreTitleLabel.Text = "Player 2s Score"
         '
         'Player1CardsWonPictureBox
         '
         Me.Player1CardsWonPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Player1CardsWonPictureBox.Location = New System.Drawing.Point(24, 27)
+        Me.Player1CardsWonPictureBox.Location = New System.Drawing.Point(32, 33)
+        Me.Player1CardsWonPictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Player1CardsWonPictureBox.Name = "Player1CardsWonPictureBox"
-        Me.Player1CardsWonPictureBox.Size = New System.Drawing.Size(62, 93)
+        Me.Player1CardsWonPictureBox.Size = New System.Drawing.Size(83, 114)
         Me.Player1CardsWonPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.Player1CardsWonPictureBox.TabIndex = 16
         Me.Player1CardsWonPictureBox.TabStop = False
@@ -269,9 +269,10 @@ Partial Class GameGUIForm
         'Player2CardsWonPictureBox
         '
         Me.Player2CardsWonPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Player2CardsWonPictureBox.Location = New System.Drawing.Point(564, 27)
+        Me.Player2CardsWonPictureBox.Location = New System.Drawing.Point(752, 33)
+        Me.Player2CardsWonPictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Player2CardsWonPictureBox.Name = "Player2CardsWonPictureBox"
-        Me.Player2CardsWonPictureBox.Size = New System.Drawing.Size(62, 93)
+        Me.Player2CardsWonPictureBox.Size = New System.Drawing.Size(83, 114)
         Me.Player2CardsWonPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.Player2CardsWonPictureBox.TabIndex = 17
         Me.Player2CardsWonPictureBox.TabStop = False
@@ -281,18 +282,17 @@ Partial Class GameGUIForm
         Me.CardsLeftTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CardsLeftTitleLabel.AutoSize = True
         Me.CardsLeftTitleLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CardsLeftTitleLabel.Location = New System.Drawing.Point(300, 97)
-        Me.CardsLeftTitleLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.CardsLeftTitleLabel.Location = New System.Drawing.Point(400, 119)
         Me.CardsLeftTitleLabel.Name = "CardsLeftTitleLabel"
-        Me.CardsLeftTitleLabel.Size = New System.Drawing.Size(55, 13)
+        Me.CardsLeftTitleLabel.Size = New System.Drawing.Size(73, 17)
         Me.CardsLeftTitleLabel.TabIndex = 18
         Me.CardsLeftTitleLabel.Text = "Cards Left"
         '
         'GameGUIForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(657, 326)
+        Me.ClientSize = New System.Drawing.Size(876, 401)
         Me.Controls.Add(Me.CardsLeftTitleLabel)
         Me.Controls.Add(Me.Player2CardsWonPictureBox)
         Me.Controls.Add(Me.Player1CardsWonPictureBox)
@@ -311,8 +311,8 @@ Partial Class GameGUIForm
         Me.Controls.Add(Me.Player1Button)
         Me.Controls.Add(Me.WarMenuStrip)
         Me.MainMenuStrip = Me.WarMenuStrip
-        Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MinimumSize = New System.Drawing.Size(673, 365)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MinimumSize = New System.Drawing.Size(891, 438)
         Me.Name = "GameGUIForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "The Game of War"
